@@ -1,0 +1,257 @@
+@charset "UTF-8";
+* { 
+	box-sizing: border-box;
+	list-style: none;
+   	text-decoration: none;
+  	border-collapse: collapse; 
+}
+body { 
+	margin: 0; 
+	padding: 0; 
+	font-family: 'Roboto', sans-serif; 
+	letter-spacing: -0.3px;
+}
+.fl { float: left; }
+.fr { float: right; }
+img { object-fit: cover; }
+
+#main_image {
+	width: 100%;
+	height: 720px;
+	background-size: cover;
+	background-position: center;
+}
+#header_shadow {
+	width: 100%;
+	height: 112px;
+	background-image: linear-gradient(to bottom,#000,rgba(0,0,0,0));
+	opacity: 0.4;
+	position: absolute;
+	top: 0;
+}
+#header {
+	width: 100%;
+	min-height: 80px;
+	padding: 0 151.5px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+#header_right{
+	width: auto;
+	height: 80px;
+	display: flex;
+	align-items: center;
+	z-index: 2;
+}
+#header > svg {
+	z-index: 2;
+}
+#my_page {
+	width: 86px;
+	height: 48px;
+	padding: 8px 8px 8px 14px;
+	background-color: #FFF;
+	border-radius: 50px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+#header_right > b:nth-child(1) {
+	color: #FFF;
+	font-size: 14px;
+	cursor: pointer;
+}
+#header_right > svg:nth-child(2) {
+	margin: 0 20px 0 18px;
+}
+#profile {
+	width: 32px;
+	height: 32px;
+	border-radius: 50px;
+}
+#main_image > div:nth-child(2) {
+	width: 335px;
+	font-size: 52px;
+	color: #222;
+	text-align: left;
+	display: block;
+	margin-left: 151.5px;
+	margin-top: 220px;
+	line-height: 55px;
+	letter-spacing: -1.5px;
+}
+#filter {
+	width: 100%;
+	height: 64px;
+	padding-top: 21px;
+	padding-left: 150px;
+}
+#f_inner_left {
+	display: inline-block;
+	width: 316px;
+	height: 36px;
+	padding-top: 9px;
+	border-right: 1px solid #DDDDDD;
+}
+.filter_icon_l {
+	padding: 7px 12px;
+	margin-right: 6px;
+	font-size: 14px;
+	border-radius: 50px;
+	border: 1px solid #DDDDDD;
+	cursor: pointer;
+}
+#f_inner_right {
+	display: inline-block;
+	width: 1252px;
+	height: 36px;
+	padding-top: 9px;
+	padding-left: 13px;
+}
+.filter_icon_r {
+	padding: 9px 16.5px;
+	margin-right: 5px;
+	font-size: 14px;
+	border-radius: 50px;
+	background-color: #f2f2f2;
+	cursor: pointer;
+}
+
+#title {
+	width: 100%;
+	font-size: 22px;
+	color: #222;
+	padding-left: 151.5px;
+	margin: 37px 0 8px;
+}
+.expz {
+	width: 100%;
+	height: 542.59px;
+	display: flex;
+	justify-content: center
+}
+.exp {
+	width: 323.2px;
+	height: 542.59px;
+	padding: 8px 8px 16px;
+	position: relative;
+}
+.exp_img {
+	width: 307.2px;
+	height: 409.59px;
+	background-image: url("https://a0.muscache.com/im/pictures/lombard/MtTemplate-2660264-media_library/original/135a8001-dd90-49fd-bd41-2429dcb917a1.jpeg?im_w=320");
+	background-size: cover;
+	margin-bottom: 10px;
+	border: 1px solid #DDD;
+	border-radius: 12px;
+}
+.exp > svg:nth-child(2) {
+	position: absolute;
+	top: 25px;
+	right: 25px;
+	stroke: white;
+	stroke-width: 2;
+}
+.exp > span:nth-child(4) {
+	font-size: 14px;
+	color: #222;
+}
+.exp > span:nth-child(5) {
+	font-size: 14px;
+	color: #717171;
+}
+.name {
+	font-size: 16px;
+	color: #222;
+	margin-top: 7px;
+}.price {
+	font-size: 16px;
+	color: #222;
+	margin-top: 6px;
+}
+
+#more_view {
+	width: 100%;
+	height: 128px;
+	margin-top: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#mv {
+	width: 99.42px;
+	height: 48px;
+	padding: 14px 24px;
+	background-color: #222;
+	font-size: 16px;
+	color: #FFF;
+	border-radius: 8px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#footer {
+	width: 100%;
+	height: 456px;
+	background-color: #F7F7F7;
+}
+#footer_inner_top {
+	width: 1624px;
+	height: 339px;
+	margin-left: 149.5px;
+	padding: 48px 0;
+	border-bottom: 1px solid #DDDDDD;
+}
+.footer_menu_box {
+	width: 528px;
+	height: 212px;
+	font-size: 14px;
+	margin-right: 8px;
+	letter-spacing: 0;
+}
+.footer_menu {
+	margin-top: 12px;
+}
+#footer_inner_bottom {
+	width: 1600px;
+	height: 118px;
+	padding: 24px 0;
+	margin-left: 149.5px;
+}
+#fib_top {
+	width: 1600px;
+	height: 30px;
+	border-bottom: 1px solid #DDDDDD;
+}
+.footer_text {
+	font-size: 14.2px;
+	margin-right: 8px;
+}
+.fib_icon {
+	margin-left: 15.7px;
+}
+#fib_bot {
+	width: 1600px;
+	height: 33px;
+	padding-top: 8px;
+	color: rgb(113, 113, 113);
+	font-size: 10px;
+	letter-spacing: 0.2px;
+	line-height: 12px;
+}
+.fib_txt1 {
+	font-size: 14px;
+	margin-right: 10px;
+	margin-left: 7px;
+}
+.won {
+	font-size: 16px;
+}
+.fib_txt2 {
+	font-size: 14px;
+	margin-right: 26px;
+	margin-left: 7px;
+	line-height: 17px;
+}

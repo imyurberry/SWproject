@@ -1,0 +1,1335 @@
+@charset "UTF-8";
+*{
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+	border-collapse: collapse;
+}
+body{	
+	margin: 0;
+	padding: 0;
+}
+.fl{ float: left; }
+.fr{ float: right;}
+/*스켈레톤코드*/
+#header{
+	width: 100%;
+	height: 80px;
+	border-bottom: 1px solid #ddd;
+	position: fixed;
+	background-color: white;
+	z-index: 2;
+}/*머리말*/
+/*회원가입 팝업*/
+#joinmember_outer{
+   background-color:rgba(0,0,0,0.5);
+   position: fixed;
+   z-index: 3;
+   top: 0;
+   bottom:0;
+   left:0;
+   right:0;
+   display:none;
+}
+#join_user{
+	width:568px; height: 570px;
+   border-radius: 12px;
+   background-color:white;
+   overflow-x:hidden;
+   box-shadow: rgba(0, 0, 0, 0.28) 0px 8px 28px 0px;
+   z-index :5;
+   position:fixed;
+   top: 160px;
+   left: 665px;
+   padding: 30px;
+   display: none;
+}
+#joinmember{
+   width:568px; height: 570px;
+   border-radius: 12px;
+   background-color:white;
+   overflow-x:hidden;
+   box-shadow: rgba(0, 0, 0, 0.28) 0px 8px 28px 0px;
+   z-index :4;
+   position:fixed;
+   top: 160px;
+    left: 665px;
+    display:none;
+}
+.join_user_form > input{
+	float: right;
+	height: 38px;
+	width: 250px;
+}
+.jm_header{
+   width:568px; height: 64px;
+   padding : 0 24px;
+   border-bottom:1px solid rgb(235, 235, 235);
+}
+.jm_header>button{
+   width:32px; height: 32px; 
+   position:absolute;
+   top: 16px;
+    left: 16px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+#join_user > button{
+   width:32px; height: 32px; 
+   position:absolute;
+   top: 2px;
+    left: 2px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.jm_header>button:hover{
+   background-color: #F7F7F7;
+}
+.jm_header>h2{
+   font-size: 16px;
+   font-weight: 800;
+   line-height: 20px;
+   position:absolute;
+   top: 21px;
+    left: 197px;
+}
+.jm_section{
+   padding :24px;
+}
+.jm_section>h2{
+   font-size: 22px;
+   font-weight: 600;
+   line-height: 26px;
+   margin-bottom: 24px;
+}
+
+.jm_seclect_box,.jm_phnum,.password{
+   box-sizing: border-box;
+    padding: 3px 0 0 5px;
+    width: 520px;
+    height: 56px;
+    color: #595f63;
+    outline: none;
+    font-size: 17px;
+    border-radius: 8px;
+    margin-left: -2px;
+    border: 1px solid rgb(176, 176, 176);
+    background-color: white;
+    margin-bottom:10px;
+}
+#jm_form>span{
+   font-size: 12px;
+   line-height: 16px;
+   color:rgb(156, 156, 156);
+}
+.jm_submit,.join_user{
+   width:524px; height: 48px; 
+   text-align: center;
+   color: rgb(255, 255, 255);
+   cursor: pointer;
+   background:  rgb(255, 56, 92);
+   font-size: 16px;
+   font-weight: 600;
+   line-height: 20px;
+   border:none;
+   border-radius: 8px;
+   margin-top:26px;
+}
+/*회원가입팝업끝*/
+#header_left{
+	width: 500px;
+	height: 80px;
+}/*로고 감싸는 쪽*/
+#header_left > a > img{
+	margin-right: 89px;
+    margin-top: 25px;
+    width: 99px;
+    height: 31px;
+}/*airbnb로고*/
+#header_center{
+	width: 700px;
+	height: 80px;
+}/*검색창을 감싸는 div*/
+#header_right{
+	width: 703px;
+	height: 80px;
+}/*프로필과 지구본, 에어비앤비를 감싸는 div*/
+#areaair{
+	width: 232px;
+	height: 42px;
+	margin: 29px auto 0px 29px;	
+}/*에어비앤비하세요 감싸는 div*/
+#areaair > a > strong{
+	font-size: 14px;
+	text-align: center;
+	margin: 0px auto 0px 15px;
+	color: black;
+	border-radius: 11px;
+}/*에어비앤비하세요 글씨*/
+#areaair > a > strong:hover{
+	background-color: rgb(247,247,247);
+}/*에어비앤비하세요 글씨 선택했을 떄*/
+#globe{
+	width: 33px;
+    height: 47px;
+    margin: 16px 25px 0 0px;
+    border-radius: 100%;
+}/*통화,화폐 지구본 감싸는 div*/
+#globe:hover{
+	cursor: pointer;
+	background-color: rgb(247,247,247);
+}/*통화,화폐 지구본 감싸는 div를 선택했을 때 css*/
+#globe > img{
+	width: 16px;
+	height: 16px;
+	top : 50%;
+	left : 50%;
+	transform : translate(47% , 98%);
+}/*지구본 이미지*/
+.currency_language_background{
+	background-color: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	display: none;
+	z-index: 3;
+	top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+#currency_language_{
+	background-color: white;
+	position: fixed;
+	width: 1035px;
+	height: 850px;
+	margin: 41px 0 0 450px;
+	border-radius: 15px;
+	display: none;
+	z-index: 4;
+}/*통화 화폐를 감싸고 있는 div*/
+.close_div{
+	width: 32px;
+	height: 32px;
+	padding: 5px;
+	margin: 17px 0 0 20px;
+    border: none;
+    position: absolute;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 100%;
+}/*닫기버튼*/
+.close_div:hover{
+	background-color: rgb(247,247,247);
+}
+#currency_{
+	width: 980px;
+	height: 784px;
+	margin: 66px auto 0 auto;
+	overflow-x: hidden;
+    overflow-y: scroll;
+}/*통화 전체 div*/
+#currency_top{
+	width: 980px;
+	height: 50px;
+	border-bottom: 1px solid #dddddd;
+}/*언어와 지역, 통화 버튼을 감싸는 div*/
+.currency_button{
+	width: 92.98px;
+	height: 49px;
+	border: none;
+	border-bottom: 3px solid #222222;
+	font-size: 14px;
+	font-weight: 600;
+	cursor: pointer;
+	background-color: white;
+}/*통화 버튼*/
+.currency_button:hover{
+	background-color: rgb(247,247,247);
+}
+.language_button{
+	width: 48px;
+	height: 49px;
+	border: none;
+	font-size: 14px;
+	font-weight: 600;
+	color: grey;
+	cursor: pointer;
+	background-color: white;
+}/*언어 버튼*/
+.language_button:hover{
+	background-color: rgb(247,247,247);
+}
+#currency_center{
+	width: 967px;
+	height: 1426px;
+	margin-top: 24px;
+	padding: 0 0 24px;
+}
+#currency_center > div > ul > li{
+	width: 183.59px;
+	height: 72px;
+	padding: 14px 12px;
+	border-radius: 41px;
+	text-align: center;
+	cursor: pointer;
+}/*각 list들 공통 css*/
+#currency_center > div > ul > li:hover{
+	background-color: rgb(247,247,247);
+}/*각 list들 공통 :hover css*/
+#currency_center > div > ul > li > div{
+	width: 154.59px;
+	height: 18px;
+	font-size: 14px;
+}/*각 list들 공통 css*/
+#currency_center > div > ul > li > div:nth-child(2){
+	color: #717171;
+}/*각 list들 공통 css*/
+#currency_center > div:nth-child(1){
+	width: 967px;
+	height: 130px;
+	margin-top: 24px;
+	padding-bottom: 24px;
+}/*추천 언어 및 지역 전체를 감싸는 div*/
+#currency_center > div:nth-child(2){
+	width: 967px;
+	height: 1426px;
+	margin-top: 24px;
+	padding-bottom: 24px;
+}/*언어와 지역을 선택하세요 를 감싸는 전체 div*/
+#currency_center > div:nth-child(1) > h2{
+	font-size: 22px;
+	font-weight: 600;
+}/*추천 언어 및 지역*/
+#profile{
+	width: 86px;
+	height: 40px;
+	background-color: white;
+	border: 1px solid #ddd;
+	border-radius: 50px;
+	margin: 20px 0 0 0;
+}/*프로필 감싸고 있는 div*/
+#profile:hover{
+	cursor: pointer;
+	box-shadow: 0px 0px 7px 1px grey;
+}
+#profile > img:nth-child(1){
+	width: 13px;
+	height: 10px;
+	top : 50%;
+	left : 50%;
+	transform : translate(123% ,-76%);
+}/*list이미지*/
+#profile > img:nth-child(2){
+	width: 32px;
+	height: 32px;
+	border-radius: 100%;
+	top: 50%;
+    left: 50%;
+    transform: translate(68% , 10%);
+}/*프로필 이미지*/
+#notice{
+	background-color: red;
+	color: white;
+	border-radius: 100%;
+	width: 16px;
+	height: 16px;
+	text-align: center;
+    line-height: 17px;
+    font-size: 11px;
+    font-weight: bold;
+    box-shadow:0px 0px 0px 2px white;
+    top: -125%;
+    left: 66%;
+    transform: translate(50% , 50%);
+    position: relative;
+}/*프로필 이미지 위쪽에 뜨는 알림 개수*/
+.profile_list{
+	width: 240px;
+	min-height: 80px;
+	position: absolute;
+	margin-left: 315px;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px -2px grey;
+	display: none;
+}/*프로필 버튼을 눌렀을 때 나오는 div*/
+.Logout{
+	width: 240px;
+	height: 43.75px;
+	border: none;
+	background-color: white;
+	text-align: left;
+	padding-left: 15px;
+}
+.profile_list > div > div{
+	width: 240px;
+	height: 43.75px;
+	border: none;
+	background-color: white;
+	text-align: left;
+	padding-left: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 10px;
+}
+.profile_list > div > div:hover{
+	background-color: rgb(247,247,247);
+}
+.profile_list > div > form > input{
+	width: 240px;
+	height: 43.75px;
+	border: none;
+	background-color: white;
+	text-align: left;
+	padding-left: 15px;
+}/*각 input태그들*/
+.profile_list > div > form > input:hover{
+	cursor: pointer;
+	background-color: rgb(247,247,247);
+}
+.profile_list > :not(div:nth-child(3)){
+	border-bottom: 1px solid #dddddd;
+}
+.profile_list_top > form > input{
+	font-weight: 700;
+}
+#content{
+	width: 100%;
+	min-height: 2400px;
+	background-color: #F2F3F5;
+	padding: 80px 0 0 0;
+}
+#content > div{
+	width: 1743px;
+	height: 2650px;
+	margin: 0 auto;
+}/*본문들을 감싸고 있을 div*/
+#profile_left{
+	width: 342px;
+	height: 487.56px;
+	position: sticky;
+	top: 80px;
+	margin-left: 50px;
+	margin-top: 50px;
+}/*프로필과 소개를 감싸고 있는 div*/
+#profile_left > section{
+	width: 342px;
+	height: 239.53px;
+	border-radius: 10px;
+	box-shadow: 5px 5px 9px -2px gray
+}
+.new_reply{
+	border: none;
+    width: 700px;
+    margin-top: 0px;
+   	border-radius: 20px;
+    padding: 10px;
+    resize: none;
+    background-color: rgb(240, 242, 245);
+    outline: none;
+}
+.send_button{
+	border: none;
+    cursor: pointer;
+    margin-top: -15px;
+    margin-right: 20px;
+    z-index: 5;
+    position: relative;
+    border-radius: 100%;
+    background-color: rgb(240, 242, 245);
+}
+.send_button:hover{
+	background-color: white;
+}
+.send_button > img{
+	width: 20px;
+	height: 20px;
+}
+section > div:nth-child(1){
+	width: 172px;
+	height: 172.52px;
+}
+#profile_left > section > div > img{
+	width: 104px;
+	height: 104px;
+	border-radius: 100%;
+	object-fit: cover;
+	margin: 21px 0 0 61px;
+}/*프로필 사진*/
+#profile_left > section > div > svg{
+	width: 104px;
+	height: 104px;
+	border-radius: 100%;
+	margin: 21px 0 0 61px;
+}
+#profile_name{
+	width: 153px;
+	height: 43.53px;
+	font-size: 31.9px;
+	font-weight: 600;
+	text-align: right;
+}/*프로필 이름*/
+#follow_li{
+	width: 170px;
+	height: 172.52px;
+}/*프로필 사진 옆 팔로워들 수*/
+#following_{
+	width: 150px;
+	margin: 3px auto;
+	height: 56px;
+	background-color: white;
+    border-radius: 10px;
+    border: 3px solid rgb(300, 150, 150);
+    cursor: pointer;
+}/*팔로잉 수 감싸고 있는 div*/
+#following_:hover{
+	background-color: #dddddd;
+}
+#following_ > div:nth-child(1){
+	font-size: 22px;
+	font-weight: 600;
+	text-align: center;
+	width: 88px;
+	height: 30px;
+	margin-top: 12px;
+}/*팔로잉*/
+#following_ > div:nth-child(2){
+	font-size: 22px;
+	font-weight: 500;
+	text-align: center;
+	width: 50px;
+	margin-top: 12px;
+}/*팔로잉 숫자*/
+#follower_{
+	width: 150px;
+	margin: 3px auto;
+	height: 56px;
+	background-color: white;
+    border-radius: 10px;
+    border: 3px solid rgb(300, 150, 150);
+    cursor: pointer;
+}/*팔로워를 감싸는 div*/
+#follower_:hover{
+	background-color: #dddddd;
+}
+#follower_ > div:nth-child(1){
+	font-size: 22px;
+	font-weight: 600;
+	text-align: center;
+	width: 88px;
+	height: 30px;
+	margin-top: 12px;
+}/*팔로워*/
+#follower_ > div:nth-child(2){
+	font-size: 21px;
+	font-weight: 500;
+	text-align: center;
+	width: 50px;
+	margin-top: 12px;
+}/*팔로워 숫자*/
+#post_{
+	width: 150px;
+	margin: 0 auto;
+	height: 56px;
+	background-color: white;
+    border-radius: 10px;
+	border: 3px solid rgb(300, 150, 150);	
+	cursor: pointer;
+}/*게시글을 감싸는 div*/
+#post_:hover{
+	background-color: #dddddd;
+}
+.following_list{
+	width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    z-index: 3;
+    position: absolute;
+    margin: -180px 0 0 172px;
+    padding: 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: none;
+    background-color: #ddd;
+}
+.follower_list{
+	width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    z-index: 3;
+    position: absolute;
+    margin: -180px 0 0 172px;
+    padding: 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: none;
+    background-color: #ddd;
+}
+#post_ > div:nth-child(1){
+	font-size: 22px;
+	font-weight: 600;
+	text-align: center;
+	width: 88px;
+	height: 30px;
+	margin-top: 12px;
+}/*게시글*/
+#post_ > div:nth-child(2){
+	font-size: 21px;
+	font-weight: 500;
+	text-align: center;
+	width: 50px;
+	margin-top: 12px;
+}/*게시글 숫자*/
+section > div:nth-child(3){
+	width: 342px;
+	height: 67px;
+	position: absolute;
+    margin-top: 168px;
+}/*메시지 보내기와 팔로잉 버튼을 감싸고 있는 div*/
+section > div:nth-child(3) > button:nth-child(1){
+	height: 30px;
+	width: 160px;
+	margin-top: 17px;
+	border: none;
+	background-color: #dddddd;
+	border-radius: 20px;
+	cursor: pointer;
+	display: none;
+}/*팔로잉 버튼*/
+section > div:nth-child(3) > button:nth-child(1):hover{
+	background-color: white;
+	border: 2px solid black;
+}
+section > div:nth-child(3) > button:nth-child(3){
+	height: 30px;
+	width: 180px;
+	margin-top: 17px;
+	border: none;
+	background-color: #dddddd;
+	margin-left: 2px;
+	border-radius: 20px;
+	cursor: pointer;
+}/*메시지 보내기 버튼*/
+section > div:nth-child(3) > button:nth-child(3):hover{
+	background-color: white;
+	border: 2px solid black;
+}
+section > div:nth-child(3) > button:nth-child(2){
+	height: 30px;
+	width: 160px;
+	margin-top: 17px;
+	border: none;
+	background-color: rgb(300, 150, 150);
+	border-radius: 20px;
+	cursor: pointer;
+}
+section > div:nth-child(3) > button:nth-child(2):hover{
+	background-color: #dddddd;
+}
+#introduce_{
+	width: 342px;
+	min-height: 50px;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 5px 5px 9px -2px gray;
+	border-top: 1px solid gray;
+	padding: 10px;
+}/*소개를 감싸고 있는 div*/
+#introduce_ > span{
+	display: inline-block;
+	width: 342px;
+	height: 40px;
+	text-align: center;
+	font-size: 13px;
+}/*소개*/
+#introduce_ > span:not(:nth-child(6)){
+	margin-bottom: 1px;
+}/*각 소개마다 여백*/
+#timeline{
+	width: 850px;
+	height: 2400px;
+	margin-left: 60px;
+}/*timeline*/
+#timeline > div:nth-child(1){
+	height: 63.96px;
+	width: 800px;
+	margin: 0 auto;
+	border-radius: 10px;
+	border: 1px solid #BEC3C9;
+	background-color: white;
+}/*"게시글"을 포함한 div*/
+#timeline > div:nth-child(1) > span{
+	display: inline-block;
+	width: 60px;
+	height: 23.98px;
+	font-size: 20px;
+	font-weight: 600;
+	margin: 16px 0 0 15px;
+}/*게시글*/
+#timeline > div:not(div:nth-child(1)){
+	width: 800px;
+	/*height: 752.62px;*/
+	height: 850px;
+	margin: 5px auto;
+	border-radius: 10px;
+	border: 1px solid #BEC3C9;
+	background-color: white;
+}/*게시글들*/
+.post_top{
+	width: 800px;
+	height: 47.97px;
+	padding: 12px 30px 0;
+}/*첫번째 게시글 머릿말*/
+.post_top > a > img{
+	width: 40px;
+	height: 40px;
+	object-fit: cover;
+	border-radius: 100%;
+}/*첫번째 게시글 머릿말 프로필 사진*/
+.post_top > span:nth-child(2){
+	font-size: 15px;
+	color: #65676B;
+	font-weight: 500;
+	margin-left: 15px;
+}/*첫번째 게시글 머릿말 이름과 알림*/
+.post_top > span:nth-child(3){
+	font-size: 15px;
+	color: #65676B;
+	font-weight: 500;
+	margin: 18px 0 0 -258px;
+    position: absolute;
+}/*첫번째 게시글 시간*/
+.post_top > span > strong{
+	color: black;
+	font-size: 15px;
+	font-weight: 600;
+}/*사용자 이름*/
+.post_top > span > strong > a{
+	color: black;
+}
+.post_top > span > strong > a:hover{
+	text-decoration: underline;
+}
+.post_center{
+	width: 798px;
+	height: 447.46px;
+	background-color: white;
+	padding: 20px;
+	font-size: 20px;
+	font-weight: 600;    
+}/*첫번째 게시글 본문 감싸고 있는 div*/
+.post_center > img:nth-child(1){
+	width: 798px;
+	height: 219.99px;
+	object-fit: cover;	
+	border-bottom: 1px solid #ddd;
+}/*배경화면*/
+.post_center > img:nth-child(2){
+	width: 400px;
+	height: 400px;
+	border-radius: 100%;
+	border: 2px solid white;
+	position: absolute;
+	margin: 25px 0 0 -600px;
+}/*1번 게시글 배경화면 아래 화면*/
+.post_footer{
+	width: 800px;
+	height: 243.95px;
+}/*게시글 1번 하단부분*/
+.post_footer > div:nth-child(1){
+	height: 41.74px;
+	width: 800px;
+}/*좋아요버튼 있는 div*/
+.post_footer > div:nth-child(1) > span:nth-child(2){
+	width: 190px;
+	height: 20px;
+	display: inline-block;
+	font-size: 15px;
+	color: #65676B;
+	margin-left: 10px;
+	margin-top: 10px;
+}/*좋아요 개수*/
+.post_footer > div:nth-child(1) > div:nth-child(3){
+	font-size: 15px;
+	color: #65676B;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+.post_footer > div:nth-child(2){
+	width: 770px;
+	height: 51.95px;
+	margin: 0 auto;
+	border-bottom: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+}/*좋아요 댓글 공유 버튼 감싸고 있는 div*/
+/*-------------------------------*/
+.like_{
+	width: 250px;
+	height: 43.98px;
+	margin: 0 5px;
+	border-radius: 10px;
+	cursor: pointer;
+}/*좋아요버튼*/
+.like_:hover{
+	background-color: rgb(247,247,247);
+}
+.like_ > div > svg:nth-child(2){
+	position: absolute;
+	margin: 1px 0 0 8px;
+	display: none;
+	fill: red;
+}
+.like_ > div{
+	margin-left: 65px;
+	margin-top: 10px;
+}
+.like_ > div > div{
+	color: black;
+	font-size: 20px;
+	font-weight: 500px;
+}
+.comment_{
+	width: 250px;
+	height: 43.98px;
+	margin-right: 5px;
+	border-radius: 10px;
+	cursor: pointer;
+}/*댓글달기 버튼*/
+.comment_:hover{
+	background-color: rgb(247,247,247);
+}
+.comment_ > div{
+	width: 134px;
+    margin: 9px 0 0 56px;
+}
+.comment_ > div > div{
+	font-size: 20px;
+	font-weight: 500;
+}/*댓글달기*/
+.share_{
+	width: 250px;
+	height: 43.98px;
+	border-radius: 10px;
+	cursor: pointer;
+}/*공유하기 버튼*/
+.share_:hover{
+	background-color: rgb(247,247,247);
+}
+.share_ > div{
+	width: 134px;
+    margin: 9px 0 0 56px;
+}
+.share_ > div > div{
+	font-size: 20px;
+	font-weight: 500;
+}/*공유하기*/
+.see_more{
+	width: 770px;
+	height:	31.99px;
+	margin: 0 auto;
+}/*댓글 더보기를 감싼 div*/
+.see_more_but{
+	width: 83.26px;
+	height: 11px;
+	border: none;
+	background-color: white;
+	font-size: 13px;
+	color: #65676B;
+	margin: 5px 0 0 13px;
+	cursor: pointer;
+}/*댓글 더보기*/
+.see_more_but:hover{
+	text-decoration: underline;
+}
+.see_more_div{
+    width: 500px;
+    height: 600px;
+    position: absolute;
+    margin: -450px 0 0 140px;
+    padding: 15px;
+    background-color: white;
+    border: 3px solid #ddd;
+    border-radius: 20px;
+    display: none;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.see_more_div > div:not(div:last-child){
+	height: 60px;
+	width: 770px;
+	margin : 18px auto 1px auto;
+}/*첫번째 댓글*/
+.profile_pic_in_comment{
+	width: 40px;
+	height: 60px;
+}
+.profile_pic_in_comment > img{
+	width: 30px;
+	height: 30px;
+	border-radius: 100%;
+	margin-left: 4px;
+}
+.detail_comment{
+	width: 730px;
+	height: 45px;
+}
+.detail_comment > div{
+	height: 45px;
+	padding-top: 3px;
+	background-color: #dddddd;
+	border-radius: 25px;
+}
+.detail_comment > div > span{
+	font-weight: 600;
+	font-size: 13px;
+	margin-left: 10px;
+}
+.detail_comment > div > div{
+	font-weight: 500;
+	font-size: 15px;
+	margin-left: 10px;
+    margin-right: 19px;
+}/*댓글본문*/
+.detail_comment > div:nth-child(1){
+	font-size: 12px;
+	color: #65676B;
+	margin-left: 10px;
+	max-width: fit-content;
+}/*2년*/
+.detail_comment > button{
+	font-size: 10px;
+	color: #65676B;
+	display: inline-block;
+	border: none;
+	background-color: white;
+}/*좋아요*/
+.comment_date{
+	width: 730px;
+	height: 15px;
+}/*댓글 시간, 좋아요버튼*/
+.comment_date > div:nth-child(1){
+	font-size: 12px;
+	color: #65676B;
+	margin-left: 10px;
+}/*2년*/
+.comment_date > button{
+	font-size: 10px;
+	color: #65676B;
+	display: inline-block;
+	border: none;
+	background-color: white;
+}/*좋아요*/
+.new_comment_in_comment_detail{
+	width: 770px;
+	height: 75px;
+	margin: 19px auto 0 auto;
+}
+.new_comment_in_comment_detail > div:nth-child(1){
+	width: 50px;
+	height: 75px;
+}
+.new_comment_in_comment_detail > div:nth-child(1) > img{
+	width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin: 330px 0 0 5px;
+}
+.new_comment_in_comment_detail > div:nth-child(2){
+	width: 400px;
+    height: 100px;
+    margin: 330px 0 0 10px;
+    border-radius: 20px;
+    background-color: rgb(240, 242, 245);
+}
+.new_reply1{
+	border: none;
+    width: 400px;
+    margin-top: 0px;
+    border-radius: 20px;
+    padding: 10px;
+    resize: none;
+    background-color: rgb(240, 242, 245);
+    outline: none;
+    height: 85px;
+}
+.comment_list{
+	width: 800px;
+	height: 121px;
+}/*댓글 미리보기*/
+.comment_list > div:nth-child(1){
+	height: 60px;
+	width: 770px;
+	margin : 0 auto 1px auto;
+}/*첫번째 댓글*/
+.comment_list > div:nth-child(1) > div:nth-child(1){
+	width: 40px;
+	height: 60px;
+}/*프로필 사진*/
+.comment_list > div:nth-child(1) > div:nth-child(1) > img{
+	width: 30px;
+	height: 30px;
+	border-radius: 100%;
+	margin-left: 4px;
+}/*프로필 사진크기*/
+.comment_list > div:nth-child(1) > div:nth-child(2){
+	width: 730px;
+	height: 45px;
+}/*댓글내용을 감싸고 있는 div*/
+.comment_list > div:nth-child(1) > div:nth-child(2) > div{
+	max-width: fit-content;
+    height: 45px;
+    padding-top: 3px;
+    background-color: #dddddd;
+    border-radius: 25px;
+}/*댓글내용*/
+.comment_list > div:nth-child(1) > div:nth-child(2) > div > span{
+	font-weight: 600;
+	font-size: 13px;
+	margin-left: 13px;
+}/*이름*/
+.comment_list > div:nth-child(1) > div:nth-child(2) > div > div{
+	font-weight: 500;
+    font-size: 15px;
+    margin-left: 13px;
+    margin-right: 21px;
+}/*댓글본문*/
+.comment_list > div:nth-child(1) > div:nth-child(3){
+	width: 730px;
+	height: 15px;
+}/*댓글 시간, 좋아요버튼*/
+.comment_list > div:nth-child(1) > div:nth-child(3) > div:nth-child(1){
+	font-size: 12px;
+	color: #65676B;
+	margin-left: 10px;
+}/*2년*/
+.comment_list > div:nth-child(1) > div:nth-child(3) > button{
+	font-size: 10px;
+	color: #65676B;
+	display: inline-block;
+	border: none;
+	background-color: white;
+}/*좋아요*/
+.comment_list > div:nth-child(2){
+	height: 60px;
+	width: 770px;
+	margin: 0 auto;
+	margin-top: 4px;
+}/*두번째 댓글*/
+.comment_list > div:nth-child(2) > div:nth-child(1){
+	width: 40px;
+	height: 60px;
+}/*프로필 사진*/
+.comment_list > div:nth-child(2) > div:nth-child(1) > img{
+	width: 30px;
+	height: 30px;
+	border-radius: 100%;
+	margin-left: 4px;
+}/*프로필 사진크기*/
+.comment_list > div:nth-child(2) > div:nth-child(2){
+	width: 730px;
+	height: 45px;
+}/*댓글내용을 감싸고 있는 div*/
+.comment_list > div:nth-child(2) > div:nth-child(2) > div{
+	max-width: fit-content;
+	height: 45px;
+	padding-top: 3px;
+	background-color: #dddddd;
+	border-radius: 25px;
+}/*댓글내용*/
+.comment_list > div:nth-child(2) > div:nth-child(2) > div > span{
+	font-weight: 600;
+	font-size: 13px;
+	margin-left: 10px;
+}/*이름*/
+.comment_list > div:nth-child(2) > div:nth-child(2) > div > div{
+	font-weight: 500;
+	font-size: 15px;
+	margin-left: 10px;
+	margin-right: 15px;
+}/*댓글본문*/
+.comment_list > div:nth-child(2) > div:nth-child(3){
+	width: 730px;
+	height: 15px;
+}/*댓글 시간, 좋아요버튼*/
+.comment_list > div:nth-child(2) > div:nth-child(3) > div:nth-child(1){
+	font-size: 12px;
+	color: #65676B;
+	margin-left: 10px;
+}/*2년*/
+.comment_list > div:nth-child(2) > div:nth-child(3) > button{
+	font-size: 10px;
+	color: #65676B;
+	display: inline-block;
+	border: none;
+}/*좋아요*/
+.new_comment{
+	width: 770px;
+	height: 75px;
+	margin: 19px auto 0 auto;
+}
+.new_comment > div:nth-child(1){
+	width: 50px;
+	height: 75px;
+}
+.new_comment > div:nth-child(1) > img{
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+}
+.new_comment > div:nth-child(2){
+	width: 700px;
+	height: 70px;
+	margin: 3px 0 0 10px;
+	border-radius: 20px;
+	background-color: rgb(240, 242, 245);
+}
+#profile_right{
+	width: 342px;
+	height: 550px;
+	position: sticky;
+	top: 80px;
+	margin-top: 150px;
+	margin-right: 80px;
+}/*프로필과 소개를 감싸고 있는 div*/
+.right_top{
+	width: 342px;
+	height: 50px;
+	padding: 10px;
+    font-weight: 600;
+    font-size: 23px;
+    text-align: center;
+}/*민영 님의 숙소·체험*/
+.right_center{
+	width: 342px;
+	height: 500px;
+}/*숙소들을 감싸고 있는 div*/
+.house_list{
+	height: 245px;
+	width: 342px;
+	margin-bottom: 20px;
+	cursor: pointer;
+}/*첫번째 숙소 감싸고 있는 div*/
+.house_list > div:nth-child(1) > img{
+	width: 342px;
+	height: 185px;
+	border-radius: 10px;
+}/*첫번째 숙소 이미지*/
+.house_list > div:nth-child(2){
+	width: 342px;
+	height: 60px;
+	margin: -4px 0 0 0;
+	padding: 10px;
+}/*첫번째 숙소 이름과 별점*/
+.room_name{
+	font-weight: 600;
+	width: 100px;
+	margin-left: 10px;
+}/*숙소이름*/
+.room_name:hover{
+	text-decoration: underline;
+}
+.room_explain_{
+	color: #65676B;
+	width: 200px;
+	margin-left: 10px;
+}/*숙소 위치*/
+.room_explain_:hover{
+	text-decoration: underline;
+}
+.room_score_{
+	width:50px;
+	margin: -8px 0 0 0;	
+}/*숙소 별점*/
+#footer{
+	width: 100%;
+	height: 469.13px;
+	background-color: rgb(247,247,247);
+	border-top: 1px solid #ddd;
+}
+#footer_inner{
+	width: 1280px;
+	height: 468.125px;
+	padding: 0 80px;
+	margin: 0 311.5px;
+	/*background-color: olivedrab;*/
+}
+#footer_list{
+	width: 1120px;
+	height: 338.11px;
+}
+#footer_list > section:nth-child(1){
+	width: 	368px;
+	height: 242.109px;
+	margin: 48px 0;
+}
+#footer_list > section:nth-child(2){
+	width: 	368px;
+	height: 242.109px;
+	margin: 48px 0 0 8px;
+}
+#footer_list > section:nth-child(3){
+	width: 	368px;
+	height: 242.109px;
+	margin: 48px 0 0 8px;
+}
+#footer_list > section:nth-child(1) > h3{
+	font-size: 14px;
+	margin: 0 0 12px;
+	color: #222222;
+}
+#footer_list > section:nth-child(1) > ul{
+	padding: 0;
+}
+#footer_list > section:nth-child(1) > ul > a > li{
+	font-size: 14px;
+	color: #222222;
+}
+#footer_list > section:nth-child(1) > ul > a > li:not(:nth-child(7)){
+	padding-bottom: 12px;
+}
+#footer_list > section:nth-child(2) > h3{
+	font-size: 14px;
+	margin: 0 0 12px;
+	color: #222222;
+}
+#footer_list > section:nth-child(2) > ul{
+	padding: 0;
+}
+#footer_list > section:nth-child(2) > ul > a > li{
+	font-size: 14px;
+	color: #222222;
+}
+#footer_list > section:nth-child(2) > ul > a > li:not(:nth-child(5)){
+	padding-bottom: 12px;
+}
+#footer_list > section:nth-child(3) > h3{
+	font-size: 14px;
+	margin: 0 0 12px;
+	color: #222222;
+}
+#footer_list > section:nth-child(3) > ul{
+	padding: 0;
+}
+#footer_list > section:nth-child(3) > ul > a > li{
+	font-size: 14px;
+	color: #222222;
+}
+#footer_list > section:nth-child(3) > ul > a > li:not(:nth-child(5)){
+	padding-bottom: 12px;
+}
+#footer_under{
+	width: 1120px;
+	height: 130.02px;
+	/*background-color: yellow;*/
+	border-top: 1px solid #dddddd;
+}
+#footer_under_top{
+	width: 1120px;
+	height: 20.02px;
+	margin-top: 25px;
+}
+#footer_under_bottom{
+	width: 1120px;
+	height: 36px;
+	margin-top: 20px;
+	border-top: 1px solid #dddddd;
+	font-size: 10px;
+}
+#fut_left{
+	width: 688.67px;
+	height: 20.02px;
+}
+#fut_left > div{
+	width: 122.31px;
+	height: 18px;
+	font-size: 13px;
+}
+#fut_left > a:nth-child(3){
+	width: 115.08px;
+	height: 18px;
+	font-size: 13px;
+	color: #222222;
+}
+#fut_left > a:nth-child(5){
+	width: 56px;
+	height: 18px;
+	font-size: 13px;
+	color: #222222;
+}
+#fut_left > a:nth-child(7){
+	width: 56px;
+	height: 18px;
+	font-size: 13px;
+	color: #222222;
+}
+#fut_left > a:nth-child(9){
+	width: 149.2px;
+	height: 18px;
+	font-size: 13px;
+	color: #222222;
+}
+#fut_left > a:nth-child(11){
+	width: 87.08px;
+	height: 18px;
+	font-size: 13px;
+	color: #222222;
+}
+#fut_left > span{
+	width: 19px;
+	height: 18px;
+	font-size: 13px;
+	text-align: center;
+}
+#fut_right{
+	width: 350.94px;
+	height: 20.02px;
+	margin: -20px 0 0 0;
+}
+#fut_right > div{
+	width: 172.94px;
+	height: 20.02px;
+}
+#fut_right > ul{
+	width: 154px;
+	height: 20.02px;
+	padding: 0px;
+	margin: 0%;
+}
+#fut_right > ul > li:not(:nth-child(5)){
+	margin-right: 16px;
+	color: #222222;
+}
+#fut_right > div > button{
+	outline: none;
+	width: 120.69px;
+	height: 18px;
+	padding: 0px 2px;
+	border: 0;
+ 	background-color: transparent;
+}
+#fut_right > div > button > a{
+	font-size: 14px;
+	margin-left: 6px;
+    font-weight: 600;
+    margin-top: -1px;
+    color: #222222;
+}
+#fut_right > div > span{
+	height: 20.02px;
+	width: 52.25px;
+}
+#fut_right > div > span > a{
+	margin-left: 2px;
+	font-size: 14px;
+	font-weight: 600;
+	margin-top: -2px;
+	color: #222222;
+}
+#fut_right > div > button > a > strong{
+	font-size: 14px;
+    font-weight: 600;
+    margin-top: -1px;
+}
+#fut_right > ul > li > a > svg{
+	color: black;
+}

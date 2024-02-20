@@ -1,0 +1,956 @@
+@charset "UTF-8";
+*{
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+	border-collapse: collapse;
+}
+body{	
+	margin: 0;
+	padding: 0;
+}
+.fl{ float: left; }
+.fr{ float: right;}
+/*스켈레톤코드*/
+#header{
+	width: 100%;
+	height: 80px;
+	border-bottom: 1px solid #ddd;
+	position: fixed;
+	background-color: white;
+	z-index: 2;
+}/*머리말*/
+
+#header_left{
+	width: 500px;
+	height: 80px;
+}/*로고 감싸는 쪽*/
+#header_left > a > img{
+	margin-right: 158px;
+    margin-top: 25px;
+    width: 27px;
+    height: 30px;
+    object-fit: cover;
+}/*airbnb로고*/
+#header_center{
+	width: 700px;
+	height: 80px;
+}/*검색창을 감싸는 div*/
+#header_right{
+	width: 703px;
+	height: 80px;
+}/*프로필과 지구본, 에어비앤비를 감싸는 div*/
+#doairbnb{
+	width: 227.22px;
+	height: 48px;
+	margin: 28px 0 0 -80px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 600;
+}/*에어비앤비할 준비가 되셨나요?*/
+#createbnb{
+	width: 223.84px;
+	height: 48px;
+	background-color: rgb(230, 30, 77);
+	margin: 18px 0 0 21px;
+	border-radius: 10px;
+}/*에어비앤비 스타트 버튼 감싸는 div*/
+#createbnb:active{
+	width: 200px;
+	height: 40px;
+}
+#createbnb > img{
+	margin: 8px 0 0 23px;
+}/*에어비앤비 스타트 버튼에 있는 svg*/
+#createbnb > p{
+	color: white;
+	font-size: 18px;
+	font-weight: 600;
+	margin: -28px 0 0 51px;
+} /*에어비앤비 스타트*/
+#content{
+	width: 100%;
+	height: 4434.5px;
+	padding: 80px 0;
+}/*본문*/
+#content_fir{
+	width: 100%;
+	height: 786px;
+}/*본문의 첫번째 div*/
+#content_fir > div{
+	width: 1280px;
+	height: 626px;
+	margin: 80px auto 0 auto;
+}/*에어비앤비버튼 div*/
+#content_fir > div > div:nth-child(1){
+	width: 640px;
+	height: 516px;
+	margin-top: 55px;
+}/*에어비앤비 버튼*/
+#content_fir > div > div:nth-child(1) > h1{
+	width: 410px;
+	height: 156px;
+	margin-top: 7px;
+}/*예상 수입*/
+#content_fir > div > div:nth-child(1) > h1 > span:not(:nth-child(3)){
+	width: 371.72px;
+	height: 67px;
+	font-size: 48px;
+	color: #FF385C;
+	font-weight: 600;
+	margin: -15px 0 0 132px;
+	letter-spacing: -3px;
+	text-align: center;
+	display: inline-block;
+}/*당신의 공간을 에어비앤비하세요.*/
+#content_fir > div > div:nth-child(1) > h1 > span:nth-child(3){
+	display: inline-block;
+	font-size: 48px;
+    font-weight: 600;
+    margin: -15px 0 0 222px;
+    width: 303px;
+}/*예상수입*/
+#price{
+	width: 410px;
+	height: 72px;
+	margin: -4px auto 0 auto;
+}/*예상가격을 감싸고 있는 div*/
+#price > span:nth-child(1){
+	width: 65.89px;
+	height: 94px;
+	display: inline-block;
+	font-size: 72px;
+	text-align: center;
+	font-weight: bold;
+	margin: -11px 0 0 38px;
+}/*₩*/
+#price > span:nth-child(2){
+	width: 266.64px;
+	height: 94px;
+	display: inline-block;
+	margin: -11px 0 0 0;
+}/*가격을 감싸고 있는 span*/
+#price > span:nth-child(2) > span:not(:nth-child(4)){
+	display: inline-block;
+	width: 41.75px;
+	height: 72px;
+	font-size: 72px;
+	font-weight: bold;
+}/*가격에 있는 자리당 숫자*/
+#price > span:nth-child(2) > span:nth-child(4){
+	display: inline-block;
+	width: 16.14px;
+	height: 72px;
+	font-size: 72px;
+	font-weight: bold;
+}/*가격 사이에 붙어있는 쉼표*/
+#content_fir > div > div > p{
+	width: 410px;
+	height: 22px;
+	text-align: center;
+	font-size: 16px;
+	margin: 18px auto 0 auto;
+}/*에 대한 예상 수입(1박 요금이 ₩104,535일 경우)*/
+#content_fir > div > div > p > button{
+	text-align: center;
+	font-size: 16px;
+	border: 0;
+	outline: 0;
+	background-color:white;
+	margin: 0px -6px 0 0;
+	font-weight: bold;
+	text-decoration: underline;
+}/*7박*/
+#content_fir > div > div:nth-child(2){
+	width: 640px;
+	height: 610px;
+	text-align: center;
+	z-index: -1;
+}/*에어비앤비 버튼 옆 지도 API감싸고 있는 div*/
+#content_fir > div > div:nth-child(2) > img{
+	object-fit: cover;
+	width: 640px;
+	height: 610px;
+	position: absolute;
+    margin: 0px 0 0 -320px;
+    z-index: 1;
+    border-radius: 20px;
+}/*지도 API*/
+#content_fir > div > div > div:nth-child(4){
+	width: 406px;
+	height: 40px;
+	margin: 33px auto 0 auto;
+}/*스크롤 감싸고 있는 div*/
+#content_fir > div > div > div:nth-child(4) > img{
+	object-fit: cover;
+	width: 406px;
+	height: 40px;
+}/*스크롤*/
+#content_fir > div > div > button:nth-child(5){
+	text-decoration: underline;
+	border: 0;
+	outline: 0;
+	color: #717171;
+	font-size: 14px;
+	margin: 11px 0 0 189px;
+	background-color: white;
+	cursor: pointer;
+}/*에어비앤비가 예상 수입을 산정하는 방법*/
+#how_to_decide_import{
+	width: 480px;
+	height: 639px;
+	position: absolute;
+	z-index: 4;
+	margin: -500px 0 0 400px;
+	border-radius: 10px;
+	background-color: white;
+	display: none;
+}/*예상수입 산정하는 방법 숨겨져있는 div*/
+#htdi_header{
+	width: 480px;
+	height: 64px;
+	padding: 0px 24px;
+}/*x버튼을 감싼 div*/
+#htdi_footer{
+	width: 480px;
+	height: 575px;
+	padding: 0px 24px 24px;
+	position: relative;
+	margin: -22px 0 0 0;
+}
+#htdi_footer > h1{
+	margin-bottom: 15px;
+}
+#htdi_footer > div{
+	width: 432px;
+	height: 464px;
+	padding: 0px 0px 24px;
+	color: #222;
+	font-size: 15px;
+}
+#htdi_header > button{
+	width: 34px;
+	height: 34px;
+	border: none;
+	background-color: white;
+	padding: 0px 9px;
+	margin: 11px 0 0 -12px;
+	cursor: pointer;
+	border-radius: 100%;
+}/*x버튼*/
+#htdi_header > button:hover{
+	background-color: rgb(247,247,247);
+}
+#htdi_background{
+	background-color: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	display: none;
+	z-index: 3;
+	top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}/*예상수입 산정하는 방법의 배경*/
+#search{
+	width: 410px;
+	height: 64px;
+	background-color: white;
+	margin: 32px 0 0 114px;
+    border-radius: 40px;
+    border: 1px solid #dddddd;
+    cursor: pointer;
+}/*검색칸 테두리 div*/
+#search > div{
+	width: 382px;
+	height: 40px;
+	margin: 0 auto;
+}/*검색칸 안에 묶여있는 div*/
+#search > div > div:nth-child(1){
+	margin: 12px 0 0 8px;
+}/*검색svg*/
+#search > div > div:nth-child(2){
+	width: 139.77px;
+	height: 20px;
+	font-size: 16px;
+	font-weight: bold;
+	/*margin: -4px 0 0 -53px;*/
+}/*서울*/
+#search > div > div:nth-child(3){
+	width: 67.52px;
+	height: 20px;
+	color: #717171;
+	font-size: 15px;
+	margin: 1px 0 0 14px;
+}/*공간 전체*/
+input[type=range]{
+	background: transparent;	
+	width: 400px;
+	accent-color: black;
+}
+input[type="range"]:focus {
+  outline: none;
+}
+input[type="range"]::-webkit-slider-thumb{
+	width: 25px; /* 슬라이더 핸들 길이 */
+    height: 25px; /* 슬라이더 핸들 높이 */
+    border-radius: 50%; /* 핸들 모양을 원모양으로 만들기 위함 */
+    background:	black; /* 슬라이더 핸들 색상 */
+    cursor: pointer; /* 슬라이더 핸들에 마우스를 갖다대면 포인터로 변경 */
+}/*안 먹는 이유*/
+#search > div > span{
+	width: 3.73px;
+	height: 21px;
+	display: inline-block;
+	color: #717171;
+	font-size: 15px;
+}/*·*/
+#search > div > div:nth-child(5){
+	width: 60.52px;
+	height: 20px;
+	color: #717171;
+	font-size: 15px;
+}/*침실 2개*/
+#content_sec{
+	width: 100%;
+	height: 1015px;
+	margin-top: -161px;
+}/*본문 중에 2번째 다이브*/
+#content_sec > div{
+	width: 1440px;
+	height: 775px;
+	margin: 120px 0 0 233px;
+    position: absolute;
+}/*2번째 중에 본문을 묶고있는 div*/
+#content_sec > div > h2{
+	width: 1280px;
+	height: 56px;
+	font-size: 48px;
+	font-weight: bold;
+	text-align: center;
+	margin: -3px auto 0 auto;
+    letter-spacing: -2px;
+}/*에어비앤비 스타트로 쉽게 에어비앤비하세요*/
+#content_sec > div > img{
+	width: 1280px;
+	height: 489px;
+	object-fit: cover;
+	margin: 45px 0 0 79px;
+}/*2번째 본문 중 사진*/
+#content_sec_bottom{
+	width: 1280px;
+	height: 150px;
+	margin: 34px auto 0 auto;
+}/*2번째 본문 중 가장 아래 글들을 포함하는 div*/
+#content_sec_bottom > div{
+	width: 373px;
+	height: 150px;
+}/*그 글들의 목록*/
+#content_sec_bottom > div:not(:nth-child(3)){
+	margin-right: 40px;
+}/*목록 중 1,2번째*/
+#content_sec_bottom > div:nth-child(1) > h3{
+	width: 373px;
+	height: 22px;
+	margin-top: 0px;
+	font-size: 18px;
+}/*슈퍼호스트의 일대일 지원*/
+#content_sec_bottom > div:nth-child(2) > h3{
+	width: 373px;
+	height: 44px;
+	margin-top: 0px;
+	font-size: 18px;
+}/*첫 예약에서 경험이 풍부한 게스트를 맞이하는 옵션*/
+#content_sec_bottom > div:nth-child(3) > h3{
+	width: 373px;
+	height: 22px;
+	margin-top: 0px;
+	font-size: 18px;
+}/*에어비앤비의 특별 지원*/
+#content_sec_bottom > div:nth-child(1) > div{
+	width: 373px;
+	height: 120px;
+	color: #717171;
+}/*1번 h3 아래 설명*/
+#content_sec_bottom > div:nth-child(2) > div{
+	width: 373px;
+	height: 72px;
+	color: #717171;
+}/*2번 h3 아래 설명*/
+#content_sec_bottom > div:nth-child(3) > div{
+	width: 373px;
+	height: 72px;
+	color: #717171;
+}/*3번 h3 아래 설명*/
+#content_thr{
+	width: 100%;
+	height: 1759.75px;
+}/*본문에서 3번째 div*/
+#content_thr > div{
+	width: 1280px;
+	height: 1679.75px;
+	margin: 0 auto;
+}/*3번째 div를 감싸고 있는 div*/
+#content_thr > div > img{
+	width: 180px;
+	height: 74.25px;
+    margin: 0 0 0 550px;
+}/*에어커버 로고*/
+#content_thr > div > h2{
+	width: 1068.25px;
+	height: 56px;
+	font-size: 48px;
+	letter-spacing: -3px;
+	margin: 0 auto;
+}/*이미지 밑 제목*/
+#content_thr > div > div{
+	width: 848px;
+	height: 1421.5px;
+	margin: 83px auto 0 auto;
+}/*테이블을 감싸고 있는 div*/
+table{
+	table-layout: fixed;
+}
+thead > tr{
+	border-bottom: 2px solid #dddddd;
+}
+thead > tr > th:nth-child(1){
+	width: 448px;
+	height: 51px;
+}
+thead > tr > th:nth-child(2){
+	width: 200px;
+	height: 51px;
+	font-size: 22px;
+    font-weight: 500;
+    padding-bottom: 21px;
+}/*에어비앤비*/
+thead > tr > th:nth-child(3){
+	width: 200px;
+	height: 51px;
+	font-size: 22px;
+    font-weight: 500;
+    padding-bottom: 21px;
+}/*경쟁사*/
+#table1 > th{
+	width: 448px;
+	height: 80px;
+}/*게스트 신원 확인*/
+#table1 > th > div{
+	font-size: 22px;
+	font-weight: 600;
+	text-align: left;
+}
+#table1 > td{
+	width: 200px;
+	height: 80px;
+}/*초록색 체크 td*/
+#table1 > td > div{
+	width: 198px;
+	height: 24px;
+}/*초록색 체크 감싸는 div*/
+#table1 > td > div > svg{
+	margin: 0 auto;
+}/*초록색 체크 svg*/
+#table2{
+	border-bottom: 2px solid #dddddd;
+}
+#table2 > td:nth-child(1){
+	height: 98px;
+	font-size: 16px;
+	color: #717171;
+}/*부가설명*/
+#table2 > td:nth-child(2){
+	height: 98px;
+}/*부가설명 옆 빈칸*/
+#table3 > th{
+	height: 80px;
+	font-size: 22px;
+	font-weight: 600;
+	text-align: left;
+}
+#table3 > td{
+	height: 80px;
+}
+#table3 > td > div > svg{
+	margin: 0 auto;
+}
+#table4{
+	border-bottom: 2px solid #dddddd;
+}
+#table4 > td{
+	height: 98px;
+	font-size: 16px;
+	color: #717171;
+}
+#table5 > th{
+	height: 80px;
+	font-size: 22px;
+	font-weight: 600;
+	text-align: left;
+}
+#table5 > td{
+	height: 80px;
+}
+#table5 > td > div > svg{
+	margin: 0 auto;
+}
+#table6{
+	border-bottom: 1px solid #dddddd;
+}
+#table6 > td{
+	height: 98px;
+	font-size: 16px;
+	color: #717171;
+}
+#table7{
+	border-bottom: 1px solid #dddddd;
+}
+#table7 > th{
+	height: 80px;
+	text-align: left;
+	font-size: 18px;
+	font-weight: 500;
+}
+#table7 > td{
+	height: 80px;
+}
+#table7 > td > div > svg{
+	margin: 0 auto;
+}
+#table8{
+	border-bottom: 1px solid #dddddd;
+}
+#table8 > th{
+	height: 80px;
+	text-align: left;
+	font-size: 18px;
+	font-weight: 500;
+}
+#table8 > td{
+	height: 80px;
+}
+#table8 > td > div > svg{
+	margin: 0 auto;
+}
+#table9{
+	border-bottom: 1px solid #dddddd;
+}
+#table9 > th{
+	height: 80px;
+	text-align: left;
+	font-size: 18px;
+	font-weight: 500;
+}
+#table9 > td{
+	height: 80px;
+}
+#table9 > td > div > svg{
+	margin: 0 auto;
+}
+#table10{
+	border-bottom: 1px solid #dddddd;
+}
+#table10 > th{
+	height: 80px;
+	text-align: left;
+	font-size: 18px;
+	font-weight: 500;
+}
+#table10 > td{
+	height: 80px;
+}
+#table10 > td > div > svg{
+	margin: 0 auto;
+}
+#table11{
+	border-bottom: 2px solid #dddddd;
+}
+#table11 > th{
+	height: 80px;
+	text-align: left;
+	font-size: 18px;
+	font-weight: 500;
+}
+#table11 > td{
+	height: 80px;
+}
+#table11 > td > div > svg{
+	margin: 0 auto;
+}
+#table12 > th{
+	height: 80px;
+	font-size: 22px;
+	font-weight: 600;
+	text-align: left;
+}
+#table12 > td{
+	height: 80px;
+}
+#table12 > td > div > svg{
+	margin: 0 auto;
+}
+#table13{
+	border-bottom: 2px solid #dddddd;
+}
+#table13 > td{
+	height: 74px;
+	font-size: 16px;
+	color: #717171;
+}
+#table14 > th{
+	height: 80px;
+	font-size: 22px;
+	font-weight: 600;
+	text-align: left;
+}
+#table14 > td{
+	height: 74px;
+}
+#table14 > td > div > svg{
+	margin: 0 auto;
+}
+#table15{
+	border-bottom: 2px solid #dddddd;
+}
+#table15 > td{
+	height: 98px;
+	font-size: 16px;
+	color: #717171;
+}
+#content_thr > div > div > p{
+	font-size: 16px;
+	color: #717171;
+}/*세번째 박스 중 가장 아래 있는 설명*/
+#content_thr > div > div > p > button{
+	color: black;
+	font-weight: 600;
+	font-size: 16px;
+	text-decoration: underline;
+	border: 0;
+	background-color: white;
+}/*자세히 알아보기*/
+#content_thr > div > span{
+	width: 136.98px;
+	height: 40px;
+	display: inline-block;
+    margin: 0 0 0 571px;	
+}/*자세히 알아보기*/
+#content_thr > div > span > a{
+	background-color: white;
+	width: 136.98px;
+	height: 40px;
+	border: 1px solid black;
+	display: inline-block;
+	border-radius: 7px;
+}/*자세히 알아보기*/
+#content_thr > div > span > a > div{
+	text-align: center;
+	margin-top: 8px;
+	font-size: 14px;
+	font-weight: 600;
+}/*자세히 알아보기*/
+#content_four{
+	width: 100%;
+	height: 502px;
+	background-color: #f7f7f7;
+}/*4번째 본문 문단*/
+#content_four > div{
+	width: 1440px;
+	height: 454px;
+	margin: 48px 0 0 232px;
+    position: absolute;
+    padding: 0 80px;
+}/*질문과 답변을 먹고 있는 div*/
+#content_four > div > div{
+	width: 640px;
+	height: 454px;
+}/*질문과 답변의 div를 왼쪽과 오른쪽으로 구분*/
+#fourth_left > h2{
+	font-size: 40px;
+}
+#fourth_right > div{
+	width: 640px;
+	height: 90px;
+}
+#fourth_right > div:not(:nth-child(5)){
+	border-bottom: 1px solid #dddddd;
+}
+#fourth_right > div:nth-child(1) > div{
+	width: 640px;
+	height: 58px;
+	margin-top: 28px;
+}
+#fourth_right > div:nth-child(2) > div{
+	width: 640px;
+	height: 58px;
+}
+#fourth_right > div:nth-child(3) > div{
+	width: 640px;
+	height: 58px;
+}
+#fourth_right > div:nth-child(4) > div{
+	width: 640px;
+	height: 58px;
+}
+#fourth_right > div:nth-child(5) > div{
+	width: 640px;
+	height: 58px;
+}
+#fourth_right > div > div > div:nth-child(1){
+	width: 608px;
+	height: 26px;
+	font-size: 22px;
+	font-weight: 600;
+}
+#fourth_right > div > div > div:nth-child(2){
+	width: 32px;
+	height: 26px;
+}
+#content_fif{
+	width: 100%;
+	height: 451.75px;
+	background-color: #f7f7f7;
+}/*5번째 본문 문단*/
+#content_fif > div{
+	width: 1440px;
+	height: 323.75px;
+	margin: 0 auto;
+	padding: 0 80px;
+}
+#fif_left > img{
+	width: 568px;
+	height: 323.75px;
+	object-fit: cover;
+	border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+#fif_right{
+	width: 712px;
+	height: 323.75px;
+	background-color: white;
+	border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+#fif_right > h2{
+	width: 568px;
+	height: 40px;
+	font-size: 40px;
+	font-weight: 600;
+	margin: 80px auto 0 auto;
+}
+#fif_right > h3{
+	width: 568px;
+	height: 24px;
+	color: #717171;
+	font-size: 18px;
+	margin: 21px auto 0 auto;
+}
+#fif_right > div{
+	width: 568px;
+	height: 40px;
+	margin: 0 auto;
+}
+#fif_right > div > a > button{
+	margin: 25px auto;
+	width: 167.97px;
+	height: 40px;
+	border: 1px solid black;
+	border-radius: 10px;
+	font-size: 14px;
+	font-weight: 600;
+	background-color: white;
+	cursor: pointer;
+}
+#footer{
+	width: 100%;
+	height: 469.13px;
+	background-color: rgb(247,247,247);
+	border-top: 1px solid #ddd;
+}
+#footer_inner{
+	width: 1280px;
+	height: 468.125px;
+	padding: 0 80px;
+	margin: 0 311.5px;
+	/*background-color: olivedrab;*/
+}
+#footer_list{
+	width: 1120px;
+	height: 338.11px;
+}
+#footer_list > section:nth-child(1){
+	width: 	368px;
+	height: 242.109px;
+	margin: 48px 0;
+}
+#footer_list > section:nth-child(2){
+	width: 	368px;
+	height: 242.109px;
+	margin: 48px 0 0 8px;
+}
+#footer_list > section:nth-child(3){
+	width: 	368px;
+	height: 242.109px;
+	margin: 48px 0 0 8px;
+}
+#footer_list > section:nth-child(1) > h3{
+	font-size: 14px;
+	margin: 0 0 12px;
+	color: #222222;
+}
+#footer_list > section:nth-child(1) > ul{
+	padding: 0;
+}
+#footer_list > section:nth-child(1) > ul > a > li{
+	font-size: 14px;
+	color: #222222;
+}
+#footer_list > section:nth-child(1) > ul > a > li:not(:nth-child(7)){
+	padding-bottom: 12px;
+}
+#footer_list > section:nth-child(2) > h3{
+	font-size: 14px;
+	margin: 0 0 12px;
+	color: #222222;
+}
+#footer_list > section:nth-child(2) > ul{
+	padding: 0;
+}
+#footer_list > section:nth-child(2) > ul > a > li{
+	font-size: 14px;
+	color: #222222;
+}
+#footer_list > section:nth-child(2) > ul > a > li:not(:nth-child(5)){
+	padding-bottom: 12px;
+}
+#footer_list > section:nth-child(3) > h3{
+	font-size: 14px;
+	margin: 0 0 12px;
+	color: #222222;
+}
+#footer_list > section:nth-child(3) > ul{
+	padding: 0;
+}
+#footer_list > section:nth-child(3) > ul > a > li{
+	font-size: 14px;
+	color: #222222;
+}
+#footer_list > section:nth-child(3) > ul > a > li:not(:nth-child(5)){
+	padding-bottom: 12px;
+}
+#footer_under{
+	width: 1120px;
+	height: 130.02px;
+	/*background-color: yellow;*/
+	border-top: 1px solid #dddddd;
+}
+#footer_under_top{
+	width: 1120px;
+	height: 20.02px;
+	margin-top: 25px;
+}
+#footer_under_bottom{
+	width: 1120px;
+	height: 36px;
+	margin-top: 20px;
+	border-top: 1px solid #dddddd;
+	font-size: 10px;
+}
+#fut_left{
+	width: 688.67px;
+	height: 20.02px;
+}
+#fut_left > div{
+	width: 122.31px;
+	height: 18px;
+	font-size: 13px;
+}
+#fut_left > a:nth-child(3){
+	width: 115.08px;
+	height: 18px;
+	font-size: 13px;
+	color: #222222;
+}
+#fut_left > a:nth-child(5){
+	width: 56px;
+	height: 18px;
+	font-size: 13px;
+	color: #222222;
+}
+#fut_left > a:nth-child(7){
+	width: 56px;
+	height: 18px;
+	font-size: 13px;
+	color: #222222;
+}
+#fut_left > a:nth-child(9){
+	width: 149.2px;
+	height: 18px;
+	font-size: 13px;
+	color: #222222;
+}
+#fut_left > a:nth-child(11){
+	width: 87.08px;
+	height: 18px;
+	font-size: 13px;
+	color: #222222;
+}
+#fut_left > span{
+	width: 19px;
+	height: 18px;
+	font-size: 13px;
+	text-align: center;
+}
+#fut_right{
+	width: 350.94px;
+	height: 20.02px;
+	margin: -20px 0 0 0;
+}
+#fut_right > div{
+	width: 172.94px;
+	height: 20.02px;
+}
+#fut_right > ul{
+	width: 154px;
+	height: 20.02px;
+	padding: 0px;
+	margin: 0%;
+}
+#fut_right > ul > li:not(:nth-child(5)){
+	margin-right: 16px;
+	color: #222222;
+}
+#fut_right > div > button{
+	outline: none;
+	width: 120.69px;
+	height: 18px;
+	padding: 0px 2px;
+	border: 0;
+ 	background-color: transparent;
+}
+#fut_right > div > button > a{
+	font-size: 14px;
+	margin-left: 6px;
+    font-weight: 600;
+    margin-top: -1px;
+    color: #222222;
+}
+#fut_right > div > span{
+	height: 20.02px;
+	width: 52.25px;
+}
+#fut_right > div > span > a{
+	margin-left: 2px;
+	font-size: 14px;
+	font-weight: 600;
+	margin-top: -2px;
+	color: #222222;
+}
+#fut_right > div > button > a > strong{
+	font-size: 14px;
+    font-weight: 600;
+    margin-top: -1px;
+}
+#fut_right > ul > li > a > svg{
+	color: black;
+}
